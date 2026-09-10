@@ -19,6 +19,6 @@ jobs:
           aws-region: us-east-1
       - run: >
           aws s3 cp
-          s3://${{ env.BUCKET }}/version/${{ github.event.inputs.version }}
+          s3://${{ env.BUCKET }}/version/${{ github.event.inputs.version }}/
           s3://${{ env.BUCKET }}/staging/
           --recursive
