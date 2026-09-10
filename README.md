@@ -15,6 +15,12 @@ we are using.
 * [React](http://facebook.github.io/react/) – Javscript component development toolkit.
 * [MIT License](LICENSE) – The license we are using.
 
+## Deployment
+
+S3 deployment is handled by GitHub Actions using OIDC for AWS authentication. See [deploy-setup.md in starter-projects](https://github.com/concord-consortium/starter-projects/blob/main/doc/deploy-setup.md) for how the AWS side is set up, and [doc/deploy.md](doc/deploy.md) for how deploys work in this repo.
+
+For the steps to cut a release, see [Production Deployment](#production-deployment) below.
+
 ## Development Setup
 
 1. Install the global dependencies:

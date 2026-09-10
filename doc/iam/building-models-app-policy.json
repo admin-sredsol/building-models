@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadWriteBuildingModelsApp",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject", "s3:AbortMultipartUpload"],
+      "Resource": "arn:aws:s3:::building-models-app.concord.org/*"
+    },
+    {
+      "Sid": "DeleteWithinDeployPaths",
+      "Effect": "Allow",
+      "Action": "s3:DeleteObject",
+      "Resource": [
+        "arn:aws:s3:::building-models-app.concord.org/branch/*",
+        "arn:aws:s3:::building-models-app.concord.org/version/*"
+      ]
+    },
+    {
+      "Sid": "ListBuildingModelsAppForSync",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::building-models-app.concord.org"
+    }
+  ]
+}
